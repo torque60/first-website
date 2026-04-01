@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>Tのポートフォリオ</title>
+		<meta name="description" content="Tのポートフォリオです。">
+		<meta name="viewport" content="width=device-width">
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+				font-size: 16px;
+			}
+
+			#wrap {
+				width: 800px;
+				margin: 0px auto;
+			}
+
+			@media(max-width:800px) {
+				#wrap {
+					width: 100%;
+				}
+			}
+			/* 600px以下でスマホ用ボタンを出す */
+
+			header,
+			main,
+			section,
+			aside,
+			footer {
+				border: 3px solid gray;
+			}
+
+			header {
+				background-image: url("header.jpg");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				text-align: right;
+				height: 300px
+			}
+
+			header h1 {
+				/* line-height: 300px; */
+				font-size: 35px;
+				color: black;
+				text-shadow: 2px 2px 1px gray;
+				border: 3px solid red;
+			}
+
+			
+			section {
+				margin: 5px;
+			}
+			
+			section h2 {
+				font-size: 25px;
+			}
+			
+			section h3 {
+				font-size: 20px;
+			}
+
+
+			
+			.main-and-aside {
+				display: flex;
+				justify-content: space-between;
+				
+			}
+
+			main {
+				flex: 1;
+			}
+
+			main ul {
+				margin-left: 5px;
+				list-style: inside;
+			}
+
+			main ul ul {
+				margin-left: 10px;
+				list-style: inside circle;
+			}
+
+			/* #qualification ul {
+				list-style: inside;
+			} */
+
+			/* #programming-languages ul ul {
+				margin-left: 10px;
+				list-style: inside circle;
+			} */
+
+			aside {
+				width:150px;
+				margin-left: 20px;
+				/* border: 3px solid red; */
+				align-content: center;
+			}
+			
+			aside ul {
+				list-style: none;
+				border-top: none;
+				border-bottom: none;
+			}
+
+			aside ul li {
+				text-align: center;
+				border-left: 3px solid gray;
+				border-right: 3px solid gray;
+				border-bottom: 3px solid gray;
+			}
+
+			aside ul li::after {
+				border-bottom: 0px solid gray;
+			}
+
+			aside ul li a {
+				display: block;
+				background-color: #555;
+				line-height: 50px;
+				color: white;
+				text-decoration: none;
+				font-size: 20px;
+				font-weight: bold;
+			}
+
+			footer {
+				border-top: none;
+				background-color: #555;
+				text-align: center;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<header>
+				<h1>Tのポートフォリオ</h1>
+			</header>
+			<div class="main-and-aside">
+				<main>
+					<section id="30s-self-intro">
+						<h2>30秒で自己紹介</h2>
+						
+						<section id="future-goal">
+							<h3>あらゆる課題に立ち向う、フルスタックエンジニアへ</h3>
+							<p>身近な困りごとから社会的な課題まで、最適な技術を組み合わせて根本から解決できる技術者を目指しています。</p>
+						</section>
+						<section id="character">
+							<h3>徹底的な探究心と、自己成長</h3>
+							<p>興味を持ったことは満足いくまで調べ抜くこだわりを持ちつつ、環境に合わせて自らをより良くアップデートできる柔軟性を持ち、他者の喜びを原動力にできる性格です。</p>
+						</section>
+						<section id="achievement">
+							<h3>考えをカタチに、課題解決型の実践力</h3>
+							<p>デジタルデバイド解消のためのスマホ講座開催や、生成AIを活用したマイクラサーバーの自動化・Discord BOT開発など、課題を解決するための実装を積み重ねてきました。</p>
+						</section>
+					</section>
+					<section id="skills">
+						<h2>スキル</h2>
+							<section id="qualification">
+								<h3>資格 :</h3>
+								<ul>
+									<li>2025/02/17 ITパスポート</li>
+									<li>2026/01/21 普通自動車第一種運転免許</li>
+									<li>現在セキュリティマネジメント取得にむけて勉強中です。</li>
+								</ul>
+							</section>
+							<section id="programming-languages">
+								<h3>言語 :</h3>
+								<ul class="lists">
+									<li>
+										Python3, C言語
+										<ul class="list-2">
+											<li>Python3とC言語はPaizaランクがDです。</li>
+										</ul>
+									</li>
+									<li>
+										HTML, CSS
+										<ul class="list-2">
+											<li>HTML、CSSは手探りで知り合い企業のサイト制作に挑戦中です。flexboxやgridデザインをfreecodecampや生成AIを使いながら学んでいます。</li>
+										</ul>
+									</li>
+									<li>現在はPython3の基礎的な問題をPaizaで挑戦中です。</li>
+								</ul>
+							</section>
+					</section>
+					<section id="outputs">
+						<h2>実績</h2>
+						<ul>
+							<li>
+								公共施設でのスマホ講座開催
+								<ul>
+									<li>
+										高校時代に市のプログラミング講座に参加したことをきっかけに、公共施設と連携して高齢者向けのスマホ講座を企画・開催。友人を誘ってメンバー4人で資料づくりから当日の講師まで担当しました。メンバーや施設職員とのコミュニケーションエラーやスケジュール調整など、様々な課題に直面しましたが、粘り強く取り組んで無事に開催できました。講義内容は、QRコードの読み取りや検索、基本的な操作方法の説明を行いました。参加者は10人以下でした。講義後半の質問タイムで、参加者ひとりひとりのスマホの悩みを聞いて解決方法を提案したことが、高評価でした。
+									</li>
+								</ul>
+							</li>
+							<li>
+								Minecraftサーバーを定時起動するスクリプトの作成
+								<ul>
+									<li>2025/02に生成AICopilotを用いて、マインクラフトJAVA版のサーバーをワンクリックで起動やバックアップができるような5行から30行の簡単なbatファイルを作成。Windowsタスクスケジューラで、作成したbatファイルを定時で実行するように設定。PCのUEFI設定からも定時にPCが起動するように設定。手動でPCの電源やサーバーにアクションする必要なく、サーバーの定時実行ができるようになりました。</li>
+								</ul>
+							</li>
+							<li>
+								外部アプリから、Minecraftサーバーの一部操作を可能にするBOTの作成
+								<ul>
+									<li>2025/10に生成AICopilotを用いて、MinecraftのサーバーをDiscordというコミュニケーションサービスで特定のコマンドを送信すると再起動や停止、自動バックアップができるようにDiscordBOTをPythonでプログラムしました。友人がサーバーで遊びたい時に起動できるようになり、定時実行よりも電気代を節約できていると思います。</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section id="next-steps">
+						<h2>これから何をしていきたいか:</h2>
+						<ul>
+							<li>
+								標準入出力や計算、条件分岐などの基礎復習に加え、アルゴリズムとデータ構造の理解を深めます。また、セキュリティマネジメントの資格取得を目指します。
+							</li>
+						</ul>
+					</section>
+					<section id="latest-interests">
+						<h2>今ハマってること</h2>
+						<ul>
+							<li>AI技術の情報収集 :
+								<ul>
+									<li>生成AI、AIエージェント、マルチエージェントシステムといった、日々進化するAIの動向を積極的に追っています 。</li>
+								</ul>
+							</li>
+							<li>
+								Copilot活用 :
+								<ul>
+									<li>Microsoft Copilotを活用し、AIへの的確な命令文（プロンプト）の作成に取り組んでいます 。ユーザーに適切な製品を提案するプロンプトを作成しました。ぜひお試しください。（あくまで参考程度にお使いください。）</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section id="life-story">
+						<h2>人生イベント</h2>
+						<ul>
+							<li>
+								幼少期〜小学生：
+								<ul>
+									<li>幼少期は、自分のやりたい放題に過ごすわがままな性格でした。</li>
+									<li>小学生になると、「先生の前で良い生徒でいる利便性」に気づきます。学校では真面目な振る舞いをし、放課後は気を緩めて過ごすといった、二面性を持つようになりました。</li>
+								</ul>
+							</li>
+							<li>
+								中学生〜高校生 :
+								<ul>
+									<li>常に真面目を装うことに疲れを感じ、少しずつ本来の自分を周囲に出せるようになりました。</li>
+									<li>自分のやりたいことに積極的に取り組む姿勢へと変化しました。</li>
+								</ul>
+							</li>
+							<li>
+								転機 :
+								<ul>
+									<li>高校内にあった「市のプログラミング講座」のチラシに興味を持ち、参加したことが大きな転機となりました。この経験から、プログラミングやITの仕組みそのものに強い関心を抱くようになりました。</li>
+									<li>知識を社会に還元： この活動を通じて公共施設とのつながりが生まれ、自ら「スマホ講座」を開催する経験を得ました。</li>
+								</ul>
+							</li>
+							<li>
+								現在 ：
+								<ul>
+									<li>ITへの興味を深め、現在はサイバー大学IT総合学部IT総合学科にてIT基礎を学んでいます。</li>
+									<li>C言語やPythonなどの基礎スキルを磨きつつ、現在は生成AI、AIエージェント、マルチエージェントシステムといった最新技術の情報収集やプロンプトエンジニアリングに熱中しています。</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</main>
+				<aside>
+					<ul>
+						<li><a href="#30s-self-intro">30秒で自己紹介</a></li>
+						<li><a href="#skills">スキル</a></li>
+						<li><a href="#outputs">実績</a></li>
+					</ul>
+				</aside>
+			</div>
+			<footer>
+				<small>(C) T </small>
+			</footer>
+		</div>
+	</body>
+</html>
