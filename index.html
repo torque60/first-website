@@ -25,7 +25,6 @@
 					width: 100%;
 				}
 			}
-			/* 600px以下でスマホ用ボタンを出す */
 
 			/* header, */
 			section {
@@ -48,16 +47,16 @@
 				text-shadow: 2px 2px 1px gray;
 			}	
 			
-			.main-and-aside {
+			/* .main-and-aside {
 				display: flex;
 				justify-content: space-between;
 				
-			}
+			} */
 			
 			main {
 				flex: 1;
 				line-height: 2;
-				margin: 0 0 0 10px;
+				/* margin: 0 0 0 10px; */
 			}
 			
 			section {
@@ -110,28 +109,50 @@
 			}
 			
 			aside {
-				width:150px;
-				margin: 0 10px 0 20px;
+				width: 100%;
 			}
 			
-			aside ul {
-				list-style: none;
-				position: sticky;
-				top: 300px;
+			.toc-container {
+				justify-self: end;
+				position: fixed;
+				top: 0px;
+				margin-right: 5px;
 			}
 
-			aside ul li {
+			
+			.toc-title {
+				font-size: 20px;
+				text-align: center;
+				cursor: pointer;
+				border: 2px solid skyblue;
+			}
+			
+			.toc-body {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease;
+			}
+			
+			.toc-container.open .toc-body {
+				max-height: 500px;
+			}
+
+			.toc-body ul {
+				list-style: none;
+			}
+
+			.toc-body li {
 				text-align: center;
 				border-top: 3px solid gray;
 				border-right: 3px solid gray;
 				border-left: 3px solid gray;
 			}
 
-			aside ul li:last-child {
+			.toc-body li:last-child {
 				border-bottom: 3px solid gray;
 			}
 
-			aside ul li a {
+			.toc-body a {
 				display: block;
 				background-color: #555;
 				color: white;
@@ -368,20 +389,30 @@
 					</section>
 				</main>
 				<aside>
-					<ul>
-						<li><a href="#">トップ</a></li>
-						<li><a href="#30s-self-intro">30秒で自己紹介</a></li>
-						<li><a href="#skills">スキル</a></li>
-						<li><a href="#outputs">実績</a></li>
-						<li><a href="#next-steps">これから何をしていきたいか</a></li>
-						<li><a href="#latest-interests">今ハマっていること</a></li>
-						<li><a href="#life-story">人生イベント</a></li>
-					</ul>
+					<div class="toc-container">
+						<div class="toc-title">目次</div>
+						<div class="toc-body">
+							<ul>
+								<li><a href="#">トップ</a></li>
+								<li><a href="#30s-self-intro">30秒で自己紹介</a></li>
+								<li><a href="#skills">スキル</a></li>
+								<li><a href="#outputs">実績</a></li>
+								<li><a href="#next-steps">これから何をしていきたいか</a></li>
+								<li><a href="#latest-interests">今ハマっていること</a></li>
+								<li><a href="#life-story">人生イベント</a></li>
+							</ul>
+						</div>
+					</div>
 				</aside>
 			</div>
 			<footer>
 				<small>(C) T </small>
 			</footer>
 		</div>
+		<script>
+			document.querySelector('.toc-title').addEventListener('click', () => {
+				document.querySelector('.toc-container').classList.toggle('open');
+			});
+		</script>
 	</body>
 </html>
